@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MacWeatherAp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crystal Lake Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leN-Fu-6M1">
+                                <rect key="frame" x="0.0" y="30" width="375" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Temprature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FG-5z-t2S">
+                                <rect key="frame" x="0.0" y="162" width="375" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6A-Bb-q2e">
+                                <rect key="frame" x="0.0" y="201" width="375" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erT-eM-eiR">
+                                <rect key="frame" x="0.0" y="343" width="375" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h18-w6-YkA">
+                                <rect key="frame" x="0.0" y="382" width="375" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1016211334617878" green="0.045760446944666078" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="erT-eM-eiR" secondAttribute="trailing" id="08B-xe-sMh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h18-w6-YkA" secondAttribute="trailing" id="5Wy-2f-jIw"/>
+                            <constraint firstItem="A6A-Bb-q2e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AVI-hh-Crc"/>
+                            <constraint firstItem="h18-w6-YkA" firstAttribute="top" secondItem="erT-eM-eiR" secondAttribute="bottom" constant="15" id="Doj-ob-kgk"/>
+                            <constraint firstItem="erT-eM-eiR" firstAttribute="top" secondItem="A6A-Bb-q2e" secondAttribute="bottom" constant="100" id="LyO-V7-7Pa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A6A-Bb-q2e" secondAttribute="trailing" id="MHd-u6-urG"/>
+                            <constraint firstItem="erT-eM-eiR" firstAttribute="top" secondItem="A6A-Bb-q2e" secondAttribute="bottom" constant="100" id="Q5a-Dn-Jts"/>
+                            <constraint firstItem="A6A-Bb-q2e" firstAttribute="top" secondItem="0FG-5z-t2S" secondAttribute="bottom" constant="15" id="SWG-EP-Et2"/>
+                            <constraint firstItem="leN-Fu-6M1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="XKE-Gb-T0o"/>
+                            <constraint firstItem="leN-Fu-6M1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="k4n-Uj-DqT"/>
+                            <constraint firstItem="leN-Fu-6M1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kb1-Vg-bel"/>
+                            <constraint firstItem="h18-w6-YkA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q94-36-dSl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0FG-5z-t2S" secondAttribute="trailing" id="rFt-3B-xdG"/>
+                            <constraint firstItem="erT-eM-eiR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tZG-O9-EGk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="leN-Fu-6M1" secondAttribute="trailing" id="wvo-nJ-wg8"/>
+                            <constraint firstItem="0FG-5z-t2S" firstAttribute="top" secondItem="leN-Fu-6M1" secondAttribute="bottom" constant="100" id="yng-uP-BPX"/>
+                            <constraint firstItem="0FG-5z-t2S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yxk-2L-DiB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentSummaryLabel" destination="h18-w6-YkA" id="Avl-US-a72"/>
+                        <outlet property="currentTempLabel" destination="A6A-Bb-q2e" id="P6y-A6-XYi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
