@@ -56,10 +56,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // create list of Items
                 for seedItem in seedItems {
                     let itemName = seedItem["itemName"]
+                    let itemStats = seedItem["itemStats"]
+                    let itemRules = seedItem["itemRules"]
+                    let itemPowerCost = seedItem["itemPointCost"]
                     let itemPointCost = seedItem["itemPointCost"]
                     if (itemName != nil), (itemPointCost != nil)  {
                         // create Item
-                        let item = Item(itemName: itemName as! String, itemPointCost: itemPointCost as! Int)
+                        let item = Item(itemName: itemName as! String, itemStats: itemStats as! String, itemRules: itemRules as! String, itemPowerCost: itemPowerCost as! String, itemPointCost: itemPointCost as! String)
                         
                         // add Item
                         items.append(item)

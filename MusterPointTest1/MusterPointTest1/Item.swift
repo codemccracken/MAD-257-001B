@@ -38,12 +38,12 @@ class Item: NSObject, NSCoding {
             itemRules = archivedItemRules
         }
         
-        if let archivedItemPowerCost = aDecoder.decodeObject(forKey: "itemPowerCost") as? Int {
+        if let archivedItemPowerCost = aDecoder.decodeObject(forKey: "itemPowerCost") as? String {
             itemPowerCost = archivedItemPowerCost
         }
         
-        if let archivedPointCost = aDecoder.decodeObject(forKey: "itemPointCost") as? Int {
-            itemPointCost = archivedPointCost
+        if let archivedItemPointCost = aDecoder.decodeObject(forKey: "itemPointCost") as? String {
+            itemPointCost = archivedItemPointCost
         }
     }
     
@@ -54,17 +54,20 @@ class Item: NSObject, NSCoding {
     var itemName: String = ""
     // Line for item stats
     var itemStats: String = ""
-    // a Line for item Rules
+    // Line for item Rules
     var itemRules: String = ""
     // Item Power Cost
-    var itemPowerCost: Int = 0
+    var itemPowerCost: String = ""
     // Item Point Cost
-    var itemPointCost: Int = 0
+    var itemPointCost: String = ""
     
-    init(itemName: String, itemPointCost: Int) {
+    init(itemName: String, itemStats: String, itemRules: String, itemPowerCost: String, itemPointCost: String) {
         super.init()
         
         self.itemName = itemName
+        self.itemStats = itemStats
+        self.itemRules = itemRules
+        self.itemPowerCost = itemPowerCost
         self.itemPointCost = itemPointCost
     }
 

@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71379864218253A4004739A3 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71379863218253A4004739A3 /* EditItemViewController.swift */; };
+		713FFD5E21864803000F7DB9 /* EditModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713FFD5D21864803000F7DB9 /* EditModelViewController.swift */; };
 		71670DED217A43DC0085F71F /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71670DEC217A43DC0085F71F /* AddItemViewController.swift */; };
+		7169C5FE2185128A00B6BA22 /* ModelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169C5FD2185128A00B6BA22 /* ModelListViewController.swift */; };
+		7169C6002185164F00B6BA22 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169C5FF2185164F00B6BA22 /* Model.swift */; };
+		7169C6022185545600B6BA22 /* AddModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169C6012185545600B6BA22 /* AddModelViewController.swift */; };
 		7171917D2177D83A0002FFA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171917C2177D83A0002FFA8 /* AppDelegate.swift */; };
 		7171917F2177D83A0002FFA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171917E2177D83A0002FFA8 /* ViewController.swift */; };
 		717191822177D83A0002FFA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717191802177D83A0002FFA8 /* Main.storyboard */; };
 		717191842177D83B0002FFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717191832177D83B0002FFA8 /* Assets.xcassets */; };
 		717191872177D83B0002FFA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717191852177D83B0002FFA8 /* LaunchScreen.storyboard */; };
-		7171918F2177D8BA0002FFA8 /* ListViewContrroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171918E2177D8BA0002FFA8 /* ListViewContrroller.swift */; };
+		7171918F2177D8BA0002FFA8 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171918E2177D8BA0002FFA8 /* ItemListViewController.swift */; };
 		717191912177DAB80002FFA8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717191902177DAB80002FFA8 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71379863218253A4004739A3 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
+		713FFD5D21864803000F7DB9 /* EditModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModelViewController.swift; sourceTree = "<group>"; };
 		71670DEC217A43DC0085F71F /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		7169C5FD2185128A00B6BA22 /* ModelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelListViewController.swift; sourceTree = "<group>"; };
+		7169C5FF2185164F00B6BA22 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7169C6012185545600B6BA22 /* AddModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModelViewController.swift; sourceTree = "<group>"; };
 		717191792177D83A0002FFA8 /* MusterPointTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusterPointTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7171917C2177D83A0002FFA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7171917E2177D83A0002FFA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +36,7 @@
 		717191832177D83B0002FFA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		717191862177D83B0002FFA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		717191882177D83B0002FFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7171918E2177D8BA0002FFA8 /* ListViewContrroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewContrroller.swift; sourceTree = "<group>"; };
+		7171918E2177D8BA0002FFA8 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		717191902177DAB80002FFA8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,10 +72,15 @@
 			children = (
 				7171917C2177D83A0002FFA8 /* AppDelegate.swift */,
 				7171917E2177D83A0002FFA8 /* ViewController.swift */,
-				7171918E2177D8BA0002FFA8 /* ListViewContrroller.swift */,
+				7171918E2177D8BA0002FFA8 /* ItemListViewController.swift */,
 				71670DEC217A43DC0085F71F /* AddItemViewController.swift */,
+				71379863218253A4004739A3 /* EditItemViewController.swift */,
+				7169C5FD2185128A00B6BA22 /* ModelListViewController.swift */,
+				7169C6012185545600B6BA22 /* AddModelViewController.swift */,
+				713FFD5D21864803000F7DB9 /* EditModelViewController.swift */,
 				717191802177D83A0002FFA8 /* Main.storyboard */,
 				717191902177DAB80002FFA8 /* Item.swift */,
+				7169C5FF2185164F00B6BA22 /* Model.swift */,
 				717191832177D83B0002FFA8 /* Assets.xcassets */,
 				717191852177D83B0002FFA8 /* LaunchScreen.storyboard */,
 				717191882177D83B0002FFA8 /* Info.plist */,
@@ -144,11 +159,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7169C6022185545600B6BA22 /* AddModelViewController.swift in Sources */,
 				71670DED217A43DC0085F71F /* AddItemViewController.swift in Sources */,
+				7169C5FE2185128A00B6BA22 /* ModelListViewController.swift in Sources */,
+				71379864218253A4004739A3 /* EditItemViewController.swift in Sources */,
 				717191912177DAB80002FFA8 /* Item.swift in Sources */,
-				7171918F2177D8BA0002FFA8 /* ListViewContrroller.swift in Sources */,
+				7171918F2177D8BA0002FFA8 /* ItemListViewController.swift in Sources */,
+				713FFD5E21864803000F7DB9 /* EditModelViewController.swift in Sources */,
 				7171917F2177D83A0002FFA8 /* ViewController.swift in Sources */,
 				7171917D2177D83A0002FFA8 /* AppDelegate.swift in Sources */,
+				7169C6002185164F00B6BA22 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

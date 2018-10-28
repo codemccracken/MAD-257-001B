@@ -20,16 +20,17 @@
                     </tabBar>
                     <connections>
                         <segue destination="rNJ-86-rkR" kind="relationship" relationship="viewControllers" id="GxL-Us-jwE"/>
+                        <segue destination="9Dt-7w-mrB" kind="relationship" relationship="viewControllers" id="pqP-6V-Sd3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMf-qh-m8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-575" y="15"/>
         </scene>
-        <!--List View Contrroller-->
+        <!--Item List View Controller-->
         <scene sceneID="nTS-1C-s2Q">
             <objects>
-                <tableViewController id="0HG-0e-iQT" customClass="ListViewContrroller" customModule="MusterPointTest1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="0HG-0e-iQT" customClass="ItemListViewController" customModule="MusterPointTest1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DrB-8N-HRR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,11 +43,83 @@
                     <navigationItem key="navigationItem" id="5zr-R7-9BI"/>
                     <connections>
                         <segue destination="5LW-gl-3g3" kind="presentation" identifier="AddItemViewController" id="GG9-I6-mxl"/>
+                        <segue destination="j4i-qV-Wq2" kind="show" identifier="EditItemViewController" id="7aK-ja-Vry"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDJ-9j-9dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1324" y="14.842578710644679"/>
+        </scene>
+        <!--Edit Item View Controller-->
+        <scene sceneID="yHQ-Fx-oQy">
+            <objects>
+                <viewController id="j4i-qV-Wq2" customClass="EditItemViewController" customModule="MusterPointTest1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MmV-ao-R8P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F67-87-qPS">
+                                <rect key="frame" x="10" y="89" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Stats" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J7r-5N-LS2">
+                                <rect key="frame" x="10" y="144" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Rules" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t22-MY-Ld0">
+                                <rect key="frame" x="10" y="199" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Point Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFR-5N-AKW">
+                                <rect key="frame" x="10" y="309" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Power Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XzG-OA-stW">
+                                <rect key="frame" x="10" y="254" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J7r-5N-LS2" firstAttribute="top" secondItem="F67-87-qPS" secondAttribute="bottom" constant="25" id="4ol-ks-xIn"/>
+                            <constraint firstItem="XzG-OA-stW" firstAttribute="leading" secondItem="o7b-MG-lFo" secondAttribute="leading" constant="10" id="9cj-CJ-dFI"/>
+                            <constraint firstItem="J7r-5N-LS2" firstAttribute="leading" secondItem="o7b-MG-lFo" secondAttribute="leading" constant="10" id="CMr-Zo-7QS"/>
+                            <constraint firstItem="XzG-OA-stW" firstAttribute="top" secondItem="t22-MY-Ld0" secondAttribute="bottom" constant="25" id="Hdx-gw-mXI"/>
+                            <constraint firstItem="o7b-MG-lFo" firstAttribute="trailing" secondItem="F67-87-qPS" secondAttribute="trailing" constant="10" id="Hu2-8X-bo4"/>
+                            <constraint firstItem="KFR-5N-AKW" firstAttribute="leading" secondItem="o7b-MG-lFo" secondAttribute="leading" constant="10" id="ItE-yD-Z7s"/>
+                            <constraint firstItem="t22-MY-Ld0" firstAttribute="leading" secondItem="o7b-MG-lFo" secondAttribute="leading" constant="10" id="WE6-ur-W05"/>
+                            <constraint firstItem="KFR-5N-AKW" firstAttribute="top" secondItem="XzG-OA-stW" secondAttribute="bottom" constant="25" id="bNc-FQ-QeM"/>
+                            <constraint firstItem="F67-87-qPS" firstAttribute="top" secondItem="o7b-MG-lFo" secondAttribute="top" constant="25" id="cCd-2I-cdS"/>
+                            <constraint firstItem="o7b-MG-lFo" firstAttribute="trailing" secondItem="KFR-5N-AKW" secondAttribute="trailing" constant="10" id="dgz-pe-Dam"/>
+                            <constraint firstItem="F67-87-qPS" firstAttribute="leading" secondItem="o7b-MG-lFo" secondAttribute="leading" constant="10" id="i5k-BI-hXD"/>
+                            <constraint firstItem="o7b-MG-lFo" firstAttribute="trailing" secondItem="t22-MY-Ld0" secondAttribute="trailing" constant="10" id="lzl-r8-0Ii"/>
+                            <constraint firstItem="o7b-MG-lFo" firstAttribute="trailing" secondItem="XzG-OA-stW" secondAttribute="trailing" constant="10" id="nwO-4N-LPH"/>
+                            <constraint firstItem="t22-MY-Ld0" firstAttribute="top" secondItem="J7r-5N-LS2" secondAttribute="bottom" constant="25" id="rTz-sg-5V3"/>
+                            <constraint firstItem="o7b-MG-lFo" firstAttribute="trailing" secondItem="J7r-5N-LS2" secondAttribute="trailing" constant="10" id="ww5-7G-wtp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o7b-MG-lFo"/>
+                    </view>
+                    <connections>
+                        <outlet property="itemNameTextField" destination="F67-87-qPS" id="0Ns-aD-W24"/>
+                        <outlet property="itemPointCostTextField" destination="KFR-5N-AKW" id="KD8-5o-kaN"/>
+                        <outlet property="itemPowerCostTextField" destination="XzG-OA-stW" id="ZB0-hI-xNk"/>
+                        <outlet property="itemRulesTextField" destination="t22-MY-Ld0" id="i04-kT-ejK"/>
+                        <outlet property="itemStatsTextField" destination="J7r-5N-LS2" id="Zhd-Kc-1ey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPH-cV-1CI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="739"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="aKW-0E-j7c">
@@ -56,12 +129,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="se4-2w-KFa">
-                                <rect key="frame" x="10" y="89" width="375" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Stats" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-VC-L1d">
                                 <rect key="frame" x="10" y="144" width="355" height="30"/>
                                 <nil key="textColor"/>
@@ -86,24 +153,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="se4-2w-KFa">
+                                <rect key="frame" x="10" y="89" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="eml-ab-NJs" secondAttribute="trailing" constant="10" id="0sH-Dx-6rX"/>
-                            <constraint firstItem="eml-ab-NJs" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="6tp-7Q-ngz"/>
-                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="abJ-VC-L1d" secondAttribute="trailing" constant="10" id="9BO-ew-CkI"/>
-                            <constraint firstItem="gw5-iI-Rbo" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="BKH-vL-mKT"/>
-                            <constraint firstItem="se4-2w-KFa" firstAttribute="trailing" secondItem="EUQ-vL-I3m" secondAttribute="trailing" constant="10" id="DAq-oY-eWH"/>
-                            <constraint firstItem="se4-2w-KFa" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="HAJ-Vf-B23"/>
-                            <constraint firstItem="abJ-VC-L1d" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="HhP-7v-h6v"/>
-                            <constraint firstItem="se4-2w-KFa" firstAttribute="top" secondItem="EUQ-vL-I3m" secondAttribute="top" constant="25" id="Hkx-Gq-lPL"/>
-                            <constraint firstItem="gw5-iI-Rbo" firstAttribute="top" secondItem="eml-ab-NJs" secondAttribute="bottom" constant="25" id="KFX-42-7yz"/>
-                            <constraint firstItem="abJ-VC-L1d" firstAttribute="top" secondItem="se4-2w-KFa" secondAttribute="bottom" constant="25" id="QWX-Gc-Jgl"/>
-                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="9a7-z4-YMJ" secondAttribute="trailing" constant="10" id="aio-Rc-o4F"/>
-                            <constraint firstItem="eml-ab-NJs" firstAttribute="top" secondItem="9a7-z4-YMJ" secondAttribute="bottom" constant="25" id="ayd-Zx-cJe"/>
-                            <constraint firstItem="9a7-z4-YMJ" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="d3D-Gg-zq1"/>
-                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="gw5-iI-Rbo" secondAttribute="trailing" constant="10" id="krw-c5-iyN"/>
-                            <constraint firstItem="9a7-z4-YMJ" firstAttribute="top" secondItem="abJ-VC-L1d" secondAttribute="bottom" constant="25" id="nkR-Ru-Uvr"/>
+                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="9a7-z4-YMJ" secondAttribute="trailing" constant="10" id="3j5-jc-Rny"/>
+                            <constraint firstItem="abJ-VC-L1d" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="9oG-Xg-PPa"/>
+                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="abJ-VC-L1d" secondAttribute="trailing" constant="10" id="Chx-fk-2OC"/>
+                            <constraint firstItem="abJ-VC-L1d" firstAttribute="top" secondItem="se4-2w-KFa" secondAttribute="bottom" constant="25" id="E4y-kP-erH"/>
+                            <constraint firstItem="gw5-iI-Rbo" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="GQn-OL-Y65"/>
+                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="eml-ab-NJs" secondAttribute="trailing" constant="10" id="LFK-Wc-A8B"/>
+                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="gw5-iI-Rbo" secondAttribute="trailing" constant="10" id="Ol9-Lf-zPA"/>
+                            <constraint firstItem="9a7-z4-YMJ" firstAttribute="top" secondItem="abJ-VC-L1d" secondAttribute="bottom" constant="25" id="Q1m-yc-iMG"/>
+                            <constraint firstItem="eml-ab-NJs" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="Q2E-BB-9fM"/>
+                            <constraint firstItem="se4-2w-KFa" firstAttribute="top" secondItem="EUQ-vL-I3m" secondAttribute="top" constant="25" id="eWa-h9-YFO"/>
+                            <constraint firstItem="9a7-z4-YMJ" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="ekS-kN-V7N"/>
+                            <constraint firstItem="gw5-iI-Rbo" firstAttribute="top" secondItem="eml-ab-NJs" secondAttribute="bottom" constant="25" id="gFX-Fr-4Ck"/>
+                            <constraint firstItem="EUQ-vL-I3m" firstAttribute="trailing" secondItem="se4-2w-KFa" secondAttribute="trailing" constant="10" id="neW-oE-eGY"/>
+                            <constraint firstItem="se4-2w-KFa" firstAttribute="leading" secondItem="EUQ-vL-I3m" secondAttribute="leading" constant="10" id="roA-bn-0GT"/>
+                            <constraint firstItem="eml-ab-NJs" firstAttribute="top" secondItem="9a7-z4-YMJ" secondAttribute="bottom" constant="25" id="rvl-Rb-Llp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EUQ-vL-I3m"/>
                     </view>
@@ -131,11 +204,128 @@
             </objects>
             <point key="canvasLocation" x="2976.8000000000002" y="14.842578710644679"/>
         </scene>
-        <!--Item-->
+        <!--Edit Model View Controller-->
+        <scene sceneID="gIq-RA-l70">
+            <objects>
+                <viewController id="clK-OU-L3r" customClass="EditModelViewController" customModule="MusterPointTest1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hg1-7m-W5R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1J0-ge-UcI">
+                                <rect key="frame" x="10" y="89" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model Stats" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFM-5n-uR3">
+                                <rect key="frame" x="10" y="144" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LFM-5n-uR3" firstAttribute="leading" secondItem="7db-to-abO" secondAttribute="leading" constant="10" id="044-hA-MmE"/>
+                            <constraint firstItem="7db-to-abO" firstAttribute="trailing" secondItem="LFM-5n-uR3" secondAttribute="trailing" constant="10" id="AYL-Xv-P60"/>
+                            <constraint firstItem="1J0-ge-UcI" firstAttribute="leading" secondItem="7db-to-abO" secondAttribute="leading" constant="10" id="M7a-xV-a7L"/>
+                            <constraint firstItem="1J0-ge-UcI" firstAttribute="top" secondItem="7db-to-abO" secondAttribute="top" constant="25" id="O1f-XY-prO"/>
+                            <constraint firstItem="LFM-5n-uR3" firstAttribute="top" secondItem="1J0-ge-UcI" secondAttribute="bottom" constant="25" id="O91-FA-sIZ"/>
+                            <constraint firstItem="7db-to-abO" firstAttribute="trailing" secondItem="1J0-ge-UcI" secondAttribute="trailing" constant="10" id="Ydb-XO-7LE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7db-to-abO"/>
+                    </view>
+                    <connections>
+                        <outlet property="modelNameTextField" destination="1J0-ge-UcI" id="HoD-f5-wOn"/>
+                        <outlet property="modelStatsTextField" destination="LFM-5n-uR3" id="oQY-rB-7eO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pYx-UH-gpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="-1466"/>
+        </scene>
+        <!--Model List View Controller-->
+        <scene sceneID="3h1-Ex-EKx">
+            <objects>
+                <tableViewController id="syO-e5-seq" customClass="ModelListViewController" customModule="MusterPointTest1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="61B-EU-5FB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="syO-e5-seq" id="0N9-lL-tHp"/>
+                            <outlet property="delegate" destination="syO-e5-seq" id="xMO-ce-NDJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ejg-6p-B69"/>
+                    <connections>
+                        <segue destination="b7I-x3-TkA" kind="presentation" identifier="AddModelViewController" id="Yna-3F-fKT"/>
+                        <segue destination="clK-OU-L3r" kind="show" identifier="EditModelViewController" id="rd5-x1-bKe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zw8-Yq-gDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="-728.18590704647681"/>
+        </scene>
+        <!--Add Model View Controller-->
+        <scene sceneID="AeM-Oa-RrR">
+            <objects>
+                <viewController id="N4r-yb-FDA" customClass="AddModelViewController" customModule="MusterPointTest1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hym-kw-k0K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-ik-Sfb">
+                                <rect key="frame" x="10" y="89" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model Stats" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACT-7K-o8b">
+                                <rect key="frame" x="10" y="144" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ACT-7K-o8b" firstAttribute="top" secondItem="IWW-ik-Sfb" secondAttribute="bottom" constant="25" id="FW3-uL-TGN"/>
+                            <constraint firstItem="Lbv-C1-r65" firstAttribute="trailing" secondItem="ACT-7K-o8b" secondAttribute="trailing" constant="10" id="SrM-0n-dtX"/>
+                            <constraint firstItem="IWW-ik-Sfb" firstAttribute="leading" secondItem="Lbv-C1-r65" secondAttribute="leading" constant="10" id="U52-YG-C9o"/>
+                            <constraint firstItem="ACT-7K-o8b" firstAttribute="leading" secondItem="Lbv-C1-r65" secondAttribute="leading" constant="10" id="YeL-hL-Reh"/>
+                            <constraint firstItem="IWW-ik-Sfb" firstAttribute="top" secondItem="Lbv-C1-r65" secondAttribute="top" constant="25" id="vpN-zN-SqU"/>
+                            <constraint firstItem="Lbv-C1-r65" firstAttribute="trailing" secondItem="IWW-ik-Sfb" secondAttribute="trailing" constant="10" id="wgb-2M-OjF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lbv-C1-r65"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5mu-qY-qPF">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="dDo-UE-naM">
+                            <connections>
+                                <action selector="canelWithSender:" destination="N4r-yb-FDA" id="xLO-w9-rIt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="DIT-Kq-uzw">
+                            <connections>
+                                <action selector="saveWithSender:" destination="N4r-yb-FDA" id="cHX-n6-FP5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="modelNameTextField" destination="IWW-ik-Sfb" id="0YD-cq-FyM"/>
+                        <outlet property="modelStatsTextField" destination="ACT-7K-o8b" id="rhe-TW-7mG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jfz-2d-kOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2968.8000000000002" y="-729.08545727136436"/>
+        </scene>
+        <!--Items-->
         <scene sceneID="Ufy-2C-miq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rNJ-86-rkR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gyS-PD-JkQ"/>
+                    <tabBarItem key="tabBarItem" title="Items" id="gyS-PD-JkQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aIG-Wa-EEG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -167,6 +357,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ne8-Cl-JxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2037.5999999999999" y="14.842578710644679"/>
+        </scene>
+        <!--Models-->
+        <scene sceneID="5uD-mQ-uc3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Dt-7w-mrB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Models" id="kM4-g4-UAw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uYK-UT-Dqj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="syO-e5-seq" kind="relationship" relationship="rootViewController" id="UPA-RU-8rp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atR-At-fB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368.80000000000001" y="-728.18590704647681"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FzH-iV-wXh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b7I-x3-TkA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jGo-MK-URv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N4r-yb-FDA" kind="relationship" relationship="rootViewController" id="uN9-Gu-dYf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Spf-nb-0Nj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029.5999999999999" y="-729.08545727136436"/>
         </scene>
     </scenes>
 </document>
